@@ -1,6 +1,4 @@
 A:
     script: /testers/cs2/lab02/suite/test
-B:
-    script: /testers/cs2/lab02/suite/test
-C:
+D:
     script: /testers/cs2/lab02/suite/test
