@@ -1,10 +1,10 @@
-package edu.caltech.cs2.lab07;
+package edu.caltech.cs2.lab06;
 
 import java.util.List;
 import java.util.SortedMap;
 
 public class GrundyPosition {
-    /* 
+    /*
      * Stores a mapping from the height of a pile to how many of those piles exist.
      * Does not include piles of size less than three.
      */
@@ -35,8 +35,8 @@ public class GrundyPosition {
     public boolean isNPosition()  {
         return false;
     }
-    
-    /** 
+
+    /**
      * Ignore everything below this point.
      **/
 
