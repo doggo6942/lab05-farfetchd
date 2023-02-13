@@ -1,4 +1,4 @@
-package edu.caltech.cs2.lab06;
+package edu.caltech.cs2.lab05;
 
 import java.util.List;
 import java.util.SortedMap;

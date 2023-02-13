@@ -1,4 +1,4 @@
-package edu.caltech.cs2.lab06;
+package edu.caltech.cs2.lab05;
 
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.collection.IsIterableContainingInAnyOrder;
