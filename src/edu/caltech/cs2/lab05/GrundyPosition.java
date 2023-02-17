@@ -148,24 +148,33 @@ public class GrundyPosition {
 
 
     public boolean isPPosition() {
+        if(table.containsKey(this)){
+            return table.get(this);
+        }
         if(this.isTerminalPosition()){
             return true;
         }
 
         else {
+
             List<GrundyPosition> positions = getMoves();
             for (GrundyPosition position : positions) {
-                if (Meme1(position) == true){
-                    return false;
+
+                    if (!position.isNPosition()) {
+                        table.put(this, false);
+                        return false;
+                    }
+//                        Meme1(position) == true){
+//                    return false;
                 }
             }
-        }
+
 //
 
-
+        table.put(this, true);
         return true;
     }
-    private HashMap<GrundyPosition, Boolean> table = new HashMap<>();
+    private static HashMap<GrundyPosition, Boolean> table = new HashMap<>();
 
     public Boolean Meme(GrundyPosition gp){
         if(!this.table.containsKey(gp)){
@@ -189,6 +198,9 @@ public class GrundyPosition {
 
 
     public boolean isNPosition()  {
+        if(table.containsKey(this)){
+            return !(table.get(this));
+        }
         if(this.isTerminalPosition()){
             return false;
         }
@@ -199,6 +211,7 @@ public class GrundyPosition {
                 //store position
                // if(Meme(position) == true){
                 if(position.isPPosition()){
+                    table.put(this,false);
                     return true;
                 }
             }
